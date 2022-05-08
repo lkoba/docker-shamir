@@ -25,10 +25,10 @@ if (command === "split") {
 } else {
     console.log("Invalid command: " + command);
     console.log();
-    console.log("Spliting into 3 shares with a 2 minimum for reconstruction:");
-    console.log("cat secret.txt | docker run -i lkoba/shamir split 3 2 > parts.txt");
+    console.log("Spliting into 3 shares with a 2 minimum needed for reconstruction:");
+    console.log("cat secret.txt | docker run -i lkoba/shamir split 3 2 > shares.txt");
     console.log();
     console.log("Reconstruction:");
-    console.log("cat some-parts.txt | docker run -i lkoba/shamir reconstruct > reconstructed.txt");
+    console.log("cat some-shares.txt | docker run -i lkoba/shamir reconstruct > reconstructed.txt");
     console.log();
 }
